@@ -1,0 +1,393 @@
+:root{
+     
+    --primary:#5d7da0;
+    --background: rgba(216, 213, 213, 0.695);
+}
+
+/* caracteristicas generales del header u el menú desplegable */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none; /*Para quitar el subarayado de los hipervinculos*/
+    list-style: none; /*Para quitar el color del subarayado*/
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color:var(--background) ;/*Utilizamos uno de los colores creados en el root*/
+    height: 5vh;
+    width: 100%;
+    display: flex;/*que la caja sea flexible*/
+    justify-content: space-around;/* Que siempre tenga el mismo espacio entre los elementos*/
+    align-items: center;
+}
+header{
+    padding: 30px;
+    background-color: var(--primary);
+}
+header h1{
+    color: white;
+    font-size: 35px;
+    letter-spacing: 0.2rem;/*1rem son como 14px*/
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    border-right: solid 0.1rem var(--primary); /*La linea que separa las diferentes opciones del menu*/
+}
+nav ul li:last-child{ /*le afecta a la a*/
+    border-right: none;
+}
+nav ul li a{
+    color: var(--primary);
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;/*separacion margenes interiores de las cajas*/
+    
+}
+nav li ul{
+    display: none;
+    /*Establecemos una posicion absoluta a los submenus con un tamalo minimo de anchura
+    para que todos sean iguales. Ocultamos los submenus*/
+    position: absolute;
+    min-width: 150px;
+}
+nav li ul li{
+    border-right: none;
+}
+nav li:hover > ul{
+    /*Mostramos los submenus cuando pasemos el raton por encima de la opcion marcada*/
+    display: block; /*Que muestre el bloque*/
+}
+/* Hero pagina ppal (INDEX) */
+.hero{
+    position:static;
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+}
+.hero h1{
+    color: white;
+    font-size: 4.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 7px black;
+    padding-top: 150px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    
+}
+.hero a{
+    text-decoration: none;
+    color: var(--primary);
+    background-color: white;
+    padding: 10px 30px;
+    margin-left: 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.3s;
+}
+.hero a:hover{
+    color:white;
+    background-color: var(--primary);
+}
+/* Hero pagina Quienes Somos */
+.hero2{
+    position:static;
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/QuienesSomos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+}
+
+.hero2 h1{
+    color: white;
+    font-size: 4.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 7px black;
+    padding-top: 150px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    
+}
+/* Hero pagina Destinos */
+.hero3{
+    position:static;
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/Destinos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+}
+
+.hero3 h1{
+    color: white;
+    font-size: 4.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 7px black;
+    padding-top: 150px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    
+}
+/* Pagina principal (index) */
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center; 
+    margin-top: 60px;
+    margin-bottom: 60px;
+      
+}
+.contenido .gridTexto{
+    position: relative;
+    max-width: 40%;
+    text-align:left;
+   
+    margin-left: 30px;
+    
+    
+}
+.contenido .gridTexto h2{
+    font-size: 3.5rem;
+    color: black;
+   /* margin-top: -200px;*/
+    margin-bottom: 20px;
+}
+.contenido .gridTexto p{
+    color: black;
+    margin-bottom: 30px;
+}
+.contenido .gridTexto a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight:400;
+    transition: 0.3s;
+}
+.contenido .gridTexto a:hover{
+    color:var(--primary);
+    background-color: white;
+    border: 3px solid var(--primary);
+}
+.contenido .gridImg{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left:50px;
+    margin-top: 0px;
+    z-index: -5;
+}
+.contenido .gridImg img{
+    height: 70vh;
+}
+.contenido .gridTexto2{
+    position: relative;
+    max-width: 40%;
+    justify-content: flex-end;
+    text-align:left;
+   margin-left: 30px;
+}
+.contenido .gridTexto2 h2{
+    font-size: 3.5rem;
+    color: black;
+    margin-bottom: 20px;
+}
+.contenido .gridTexto2 p{
+    color: black;
+    margin-bottom: 30px;
+}
+.contenido .gridTexto2 a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight:400;
+    transition: 0.3s;
+}
+.contenido .gridTexto2 a:hover{
+    color:var(--primary);
+    background-color: white;
+    border: 3px solid var(--primary);
+}
+.contenido .gridImg2{
+    width: 40%;
+    display: flex;
+    /*justify-content: flex-end;*/
+    margin-left:50px;
+    margin-top: 0px;
+    z-index: -5;
+}
+.contenido .gridImg2 img{
+    height: 70vh;
+}
+/* caracteristicas para el pie de pagina */
+footer{
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+/*  PAGINA FORMULARIO  */
+#tituloForm{
+    margin-top: 50px;
+    margin-left: 40px;
+    color: black;
+    text-align: left;
+    font-size: 1rem;
+    background-color: white;
+    padding: 2px;
+}
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;   
+}
+.contenido .formul{
+    position: relative;
+    max-width: 50%;
+    text-align:left;
+    margin-left: 30px;
+}
+.contenido .formul form {
+    width: 90%;
+    margin-top: -7px;
+    color: black;
+    background-color:white;    
+}
+fieldset{
+   margin: 7px;  
+}
+legend{
+    font-size: 1.2rem;
+    padding: 10px;    
+}
+input{
+    margin:3px;
+}
+.contenido .imgBox{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left:50px;
+    margin-top: -90px;
+    z-index: -5;
+}
+.contenido .imgBox img{
+    height: 70vh;
+}
+#botonEnviar{
+    color: var(--primary);
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-weight:400;
+    transition: 0.3s;
+    margin-bottom: 50px;
+}
+#botonEnviar:hover{
+    color: white;
+    background-color: var(--primary);
+}
+/* PARA LA PAGINA DE ISLANDIA */
+.hero4{
+    position:static;
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/Islandia.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    margin-bottom: 20px;
+}
+.hero4 h1{
+    color: white;
+    font-size: 4.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 7px black;
+    padding-top: 150px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    
+}
+.hero4 a{
+    text-decoration: none;
+    color: var(--primary);
+    background-color: white;
+    padding: 10px 30px;
+    margin-left: 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.3s;
+}
+.hero4 a:hover{
+    color:white;
+    background-color: var(--primary);
+}
+/* PARA LA PAGINA DE BALI */
+.hero5{
+    position:static;
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/bali.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    margin-bottom: 20px;
+}
+.hero5 h1{
+    color: white;
+    font-size: 4.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 7px black;
+    padding-top: 150px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    
+}
+.hero5 a{
+    text-decoration: none;
+    color: var(--primary);
+    background-color: white;
+    padding: 10px 30px;
+    margin-left: 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.3s;
+}
+.hero5 a:hover{
+    color:white;
+    background-color: var(--primary);
+}
+
+
+
+
+
+

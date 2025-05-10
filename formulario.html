@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario de contacto</title>
+</head>
+<body>
+    <header>
+        <H1>My Travel España</H1>
+    </header>
+    <nav>
+        <ul class="menu-box">
+            <li>
+                <a href="index.html" class="fa fa-home">Inicio</a>
+            </li>
+            <li>
+                <a href="Quienessomos.html" class="fa fa-laptop">Quiénes somos</a>
+            </li>
+            <li>
+                <a href="Destinos.html" class="fa fa-android">Destinos</a>
+                <ul>
+                    <li><a href="islandia.html">Islandia</a></li>
+                    <li><a href="bali.html">Bali</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="fa fa-html5">Contacto</a>
+            </li>
+        </ul>                
+    </nav>
+    <!--<div>
+        <p>Por favor rellene con los datos de su viaje el siguiente cuestionario y 
+            <br>le contactaremos lo antes posible</p>
+    </div>-->
+    <div id="tituloForm">
+        <h1>Consigue tu viaje</h1>
+    </div>
+    <div class="contenido">
+        <div class="formul">
+            <form action="mailto: carmenribeshernandez@gmail.com">
+            
+                <fieldset >
+                    <legend>Datos personales</legend>
+                    Nombre: <input type="text"> 
+                    Apellidos: <input type="text"> 
+                    <br>DNI: <input type="text"> 
+                    <br>Email: <input type="email">  Telefono: <input type="tel" >
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Domicilio</legend>
+                    Domicilio (Calle, numero,y piso) <input type="text"> Localidad: <input type="text">
+                    <br> Código Postal: <input type="number"> Provincia: <input type="text">
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del viaje</legend>
+                    Fecha inicial: <input type="date">  Fecha final: <input type="date">
+                    <br>Nº Personas: <input type="number">
+                    <br>¿Viajas con niños? 
+                    <input type="checkbox" name="si">Si
+                    <input type="checkbox" name="No">No
+                    En caso afirmativo, ¿con cuantos niños viajas? <input type="number">
+                    <br>Destino: <select name="sistemas">
+                                    <option value="1">Bali</option>
+                                    <option value="2">Islandia</option>
+                            </select>
+                    <br>Qué no puede faltar en tu viaje: 
+                    <br><textarea name="" id=""></textarea>
+                    
+
+                </fieldset>
+
+            <fieldset>
+                <legend>Comentarios</legend>
+                <textarea name="" id=""></textarea>
+            </fieldset>
+            <br><input type="submit" value="Enviar" id="botonEnviar">
+            </form>
+        </div>
+        <div class="imgBox">
+            <img src="img/Formulario.jpg" alt="">
+            <!--Imagen descargada de pexels.com-->
+        </div>
+    </div>
+
+    
+</body>
+</html>
